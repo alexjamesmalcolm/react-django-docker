@@ -1,0 +1,16 @@
+[
+  {
+    "model": "client.Client",
+    "pk": 1,
+    "fields": {
+      "name": "bob"
+    }
+  },
+  {
+    "model": "client.Client",
+    "pk": 2,
+    "fields": {
+      "name": "Rue21"
+    }
+  }
+]
