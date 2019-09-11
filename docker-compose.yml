@@ -3,15 +3,15 @@ version: "3"
 services:
   web:
     build: ./web
-    command: bash -c "cd web && npm i && npm start"
+    command: bash -c "npm i && npm start"
     volumes:
-      - .:/web
+      - ./web:/web
     ports:
       - "3000:3000"
   server:
     build: ./server
-    command: bash -c "cd server && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     volumes:
-      - .:/server
+      - ./server:/server
     ports:
       - "8000:8000"
