@@ -83,15 +83,11 @@ WSGI_APPLICATION = 'wsgi.application'
 #
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'iams',
-        # 'USER': 'root',
-        # 'PASSWORD': 'root',
-        # 'HOST': 'localhost',
-        'USER': 'nate',
-        'PASSWORD': '',
-        'HOST': '192.168.11.130',
-        'PORT': 3306,
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'HOST': 'database',  # set in docker-compose.yml
+        'PORT': 5432  # default postgres port
     }
 }
 
