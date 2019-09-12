@@ -3,7 +3,6 @@ version: "2"
 services:
   web:
     build: ./web
-    restart: always
     command: bash -c "npm i && npm start"
     volumes:
       - ./web:/web
@@ -11,7 +10,6 @@ services:
       - "3000:3000"
   server:
     build: ./server
-    restart: always
     command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     volumes:
       - ./server:/server
@@ -21,7 +19,6 @@ services:
       - database
   database:
     image: postgres
-    restart: always
     volumes:
       - db-data:/var/lib/postgresql/data
 

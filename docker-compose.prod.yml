@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  web:
+    restart: always
+    command: bash -c "npm i && npm run build && npx serve -s build"
+    ports:
+      - "5000:5000"
+  server:
+    restart: always
+  database:
+    restart: always
