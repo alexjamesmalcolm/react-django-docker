@@ -4,8 +4,6 @@ services:
   web:
     restart: always
     command: bash -c "npm i && npm run build && npx serve -s build -l 3000"
-    ports:
-      - "5000:5000"
   server:
     restart: always
   database:
